@@ -198,6 +198,45 @@ favorMovieSet.removeAll()
 gabesFavMovieSet = []
 
 
+// 类和结构体
+
+
+class Animal {
+    var age:Int?
+}
+
+// Cat 类
+class Cat:Animal {
+    var name:String?
+}
+// Dog 结构体
+struct Dog {
+    var name:String?
+}
+
+
+let yellowCat = Cat()
+yellowCat.name = "Whiskers"
+print(yellowCat.name)
+print(yellowCat.age)
+
+var yellowDog = Dog()
+yellowDog.name = "Bruno"
+print(yellowDog.name)
+
+let yellowStrayCat = yellowCat
+yellowStrayCat.name = "Smoke"
+print(yellowStrayCat.name)
+print(yellowCat.name)
+
+var yellowStrayDog = yellowDog
+yellowStrayDog.name = "Max"
+print(yellowStrayDog.name)
+print(yellowDog.name)
+
+
+
+
 
 
 
