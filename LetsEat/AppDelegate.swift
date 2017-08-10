@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        setupDefaultColors()
         return true
     }
 
@@ -41,6 +42,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func setupDefaultColors() {
+        // 设置标签栏内按钮或者label的颜色
+        UITabBar.appearance().tintColor = .black
+        // 设置标签栏的背景颜色(barTintColor)
+        UITabBar.appearance().barTintColor = .white
+
+        // 标签栏项目字体的颜色
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.darkGray], for: .normal)
+        // 标签栏项目被选中字体的颜色
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.black], for: .selected)
+
+        // 导航栏内按钮或者label的颜色
+        UINavigationBar.appearance().tintColor = .black
+        // 导航栏的背景颜色(barTintColor)
+        UINavigationBar.appearance().barTintColor = .white
+
+        UITabBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().isTranslucent = false
+    }
 
 }
 
