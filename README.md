@@ -36,7 +36,7 @@ segue 用于控制器之间的链接。Segue还给你指定从一个场景到另
 
 ###### 理解MVC结构模式
 
-Model 用于处理程序的数据和业务逻辑，工作是处理数据表示、数据存储和对数据执行的操作。
+Model 用于处理程序的数据和业务逻辑，是处理数据表示、数据存储和对数据执行的操作。
 View 是你在视图中看到的所有东西。与用户的交互中呈现或格式化数据。
 Controller 用于链接和协调Model和View。控制器处理许多视图的设置和链接，还解释用户操作。
 
@@ -53,6 +53,10 @@ Controller 用于链接和协调Model和View。控制器处理许多视图的设
 
 为了使用UIViewController、UICollectionViewController、UITableViewController,需要创建这些元素的类文件。
 每个文件将处理控制器发送和接收的所有逻辑和交互。与交互一起，类文件负责接收数据。
+DataSource属性是用来为我们的集合视图提供数据，所以我们需要通过我们这个属性的任何数据。
+另一方面Delegate，提供该行为的委托属性不要求我们提供任何东西，因为它接收集合视图中发生的交互。
+
+Storyboard -》 Extend Edges 延伸边缘
 
 ###### 模型(Model)
 ###### Collection View Cell
