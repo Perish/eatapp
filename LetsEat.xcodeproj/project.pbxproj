@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		942BC9261F3DBB4C007C7068 /* ExploreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942BC9251F3DBB4C007C7068 /* ExploreItem.swift */; };
 		94BAB1781F3C3D75008CD511 /* Explore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94BAB1761F3C3D75008CD511 /* Explore.storyboard */; };
 		94BAB17A1F3C3DF2008CD511 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94BAB1791F3C3DF2008CD511 /* Map.storyboard */; };
 		94BAB18B1F3C695B008CD511 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BAB18A1F3C695B008CD511 /* ExploreViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		942BC9251F3DBB4C007C7068 /* ExploreItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreItem.swift; sourceTree = "<group>"; };
 		94BAB1771F3C3D75008CD511 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Explore.storyboard; sourceTree = "<group>"; };
 		94BAB1791F3C3DF2008CD511 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		94BAB18A1F3C695B008CD511 /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 		94BAB1891F3C6670008CD511 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				942BC9251F3DBB4C007C7068 /* ExploreItem.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			files = (
 				94BAB18B1F3C695B008CD511 /* ExploreViewController.swift in Sources */,
 				94C6FAFB1F3AF14A00EA6A4B /* AppDelegate.swift in Sources */,
+				942BC9261F3DBB4C007C7068 /* ExploreItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
