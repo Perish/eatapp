@@ -56,9 +56,87 @@ Controller 用于链接和协调Model和View。控制器处理许多视图的设
 DataSource属性是用来为我们的集合视图提供数据，所以我们需要通过我们这个属性的任何数据。
 另一方面Delegate，提供该行为的委托属性不要求我们提供任何东西，因为它接收集合视图中发生的交互。
 
-Storyboard -》 Extend Edges 延伸边缘
+Storyboard -》 Extend Edges 延伸边缘,去留白
 
 ###### 模型(Model)
+
+如何读取plist中的数据
+guard let path = Bundle.main.path(forResource: "nameofplist", ofType: "plist"),
+      let items = NSArray(contentOfFile: path) else {
+        return [[:]]
+      }
+return items as! [[String:AnyObject]]
+先通过Bundle.main.path找到该文件的path，然后通过NSArrary读取里面的内容items。然后把items返回。
+
+通过Struct定义一个数据结构，
+struct ExploreItem {
+  var name:String?
+  var image:String?
+}
+给ExploreItem做扩展extension
+extension ExploreItem {
+  init(dict:[String:AnyObject]) {
+    self.name = dict["name"] as? String
+    self.image = dict["image"] as? String
+  }
+}
+
+这样就可以通过ExploreItem(dict: data) 来初始化数据.
+
+有疑问的知识点：
+as as! as? 三个的区别？
+
+
 ###### Collection View Cell
+
+网格布局和单列
+
 ###### Restaurant 列表
+
+
+###  8. 列表
+
+###### 在故事板中更新UI
+
+  @IBAction func 定义一个可以和外部控件相连接的函数
+  如：
+  @IBAction func unwindLocationCancel(segue:UIStoryboardSegue){}
+
+###### 添加table view
+
+在工具栏的下边找到table view控件，拖进视图，点击pin增加四个限制top left right bottom 分别为0,然后选中view controller，去除 Extend Edges 里的Under Top Bars和Under Bottom Bars的选中状态，去白边。
+
+###### 创建plist文件
+
+###### 地址数据管理(manager model)
+
+import Foundation
+
+class LocationDataManager {
+    private var arrLocations:[String] = []
+    
+    func fetch() {
+        for location in loadData() {
+            arrLocations.append(location)
+        }
+    }
+    
+    func numberOfItems() -> Int {
+        return arrLocations.count
+    }
+    
+    func locationItem(at index:IndexPath) -> String {
+        return arrLocations[index.item]
+    }
+    
+    private func loadData() -> [String] {
+        guard let path = Bundle.main.path(forResource: "Locations", ofType: "plist"),
+            let items = NSArray(contentsOfFile: path) else {
+                return []
+        }
+        return items as! [String]
+    }
+}
+
+
 

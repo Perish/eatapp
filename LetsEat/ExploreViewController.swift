@@ -41,5 +41,8 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource {
         
         return cell
     }
+    
+//    present modally segue cancel
+    @IBAction func unwindLocationCancel(segue:UIStoryboardSegue){}
 
 }
